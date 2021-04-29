@@ -15,10 +15,11 @@
         	}
 
         	p {
-            	font-size: 30px;
+            	font-size: 27px;
             	font-family: optima;
         	}
 
+            /* Is the css code for the 3 buttons at the bottom of the page for navigation */
 			#button1 {
                 border-radius: 35px;
                 width: 150px;
@@ -31,7 +32,7 @@
                 border: 2px solid #000000;
                 padding: 5px 5px;
             }
-
+            /* Is the css code for the 3 buttons when hovered over at the bottom of the page for navigation */
             #button1:hover {
             	background-color: #c7212f;
                 border: 2px solid #000000;
@@ -39,8 +40,58 @@
             }
 
 
-           
+            /* Explains the search bar */
+            #Search {
+                font-size: 24px;
+                font-family: optima;
+            }
+            
+            
+            /* What the button to submit for the search bar looks like */
+            #SB {
+                border-radius: 15px;
+                width: 60px;
+                height: 60px;
+                font-size: 14px;
+                background: black;
+                color: white;
+                font-family: optima;
+                cursor: pointer;
+                border: 2px solid #000000;
+                padding: 5px 5px;
+            }
+            /* What the button for the submit looks like for the search bar when hovered (only changed the background color to blue) */
+            #SB:hover {
+                background-color: #549aff;
+                border: 2px solid #000000;
+                padding: 5px 5px;
+            }
+            /* What the text is for the input of the search bar, including the broder radius */
+            #myinput {
+                padding:15px; 
+                border-radius: 10px;
+                font-size: 15px;
+                font-family: optima;
+            }
+            /* For the output of the search bar text*/
+            #myoutput {
+                font-size: 20px;
+                font-family: optima;
+            }
+            /* Used for like a header bar, for different sections in the page */
+            h1 {
+                background-color:#ffffff;
+                color: black;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                padding: 10px;
+                text-align: center;
+                font-family: optima;
+                border-radius: 35px;
+                border: 2px solid #000000;              
+            }
 
+           
 
 		</style>
 
@@ -49,16 +100,42 @@
 
 
 	<body>
-		
-
-		<p>HI</p>
-
 
 
 
 		<center>
 		
+    <h1>Info</h1>
 
+            <!----Is the details for the search bar--->
+            <p>Down below is a search bar where it will give you information about financial literacy rates around the world! Keep this information in mind because later there will be other information relating back!</p>
+
+<!---Here is the search bar where people can search for how financial literate people are in any country in the world--->
+        <p id="Search">Search over 150+ countries, world average and all continents (besides Antartica) that will show what percent of adults are financially literate in that place! 
+        <i>Case</i> and <i>spelling</i> sensitive, is applicable for a few abbriviations like US, USA, United States, and others!</p>
+
+<br>
+       
+        <input type="text" id="myinput"><br>
+        <button onclick="sayhi()" id="SB">Submit</button>
+        <div id="myoutput"></div>
+
+       
+<br><br>
+
+        <h1>Key Details</h1>
+
+        <h2>There's some key details that should be recognized like, the worldwide financial literacy rate for adults is 33%, in Africa it's 32.7%, in Asia it's 32.3%, in Europe it's 46.7%, in North America it's 42.7%, in South America it's 31.6%, and in Australia it's 62.5%. </h2>
+
+
+
+
+
+        <br><br><br><br>
+
+
+
+<!---Buttons for the navigation between pages on the website, these buttons are on everypage---->
 		<button id="button1" onclick="window.location.href = 'comparison.html';" target="_blank">
         Back
         </button>
@@ -82,9 +159,23 @@
 	</body>
 
 
+<!--Javascript part of the code (script)---->
+<!---This whole script tag is used for the search bar about what percent of adults in certain countries and continents are financially literate--->
 	<script>
 		
-
+    function sayhi() {
+                var textObj = document.getElementById("myinput");
+                var divObj = document.getElementById("myoutput");
+                
+                var data = [{name: "Afghanistan", age: 14}, {name: "Africa", age: 32.7}, {name: "Albania", age: 14},{name: "Algeria", age:                33},{name: "Angola", age: 15},{name: "Argentina", age: 28},{name: "Armenia", age:                18}, {name: "Asia", age: 32.3}, {name: "Australia", age: 62.5},{name: "Austria", age: 53},{name: "Azerbaijan", age:            36},{name: "Bahrain", age: 40},{name: "Bangladesh", age: 19},{name: "Belarus", age:              38},{name: "Belgium", age: 55},{name: "Belize", age: 33},{name: "Benin", age: 37},              {name: "Bangladesh", age: 4.0},{name: "Bhutan", age: 54},{name: "Bolivia", age:              24},{name: "Bosnia and Herzegovina", age: 27},{name: "Botswana", age: 52},{name: "Brazil", age:              35},{name: "Bulgaria", age: 35},{name: "Burkina Faso", age: 33},{name: "Burundi", age: 24},{name: "Cambodia", age: 18},{name: "Cameroon", age: 38},              {name: "Canada", age: 68},{name: "Chad", age: 26},{name:                    "Chile", age: 41},{name: "China", age: 28},{name: "Colombia", age: 32},{name:              "Congo, Dem. Rep.", age: 32},{name: "Congo, Rep.", age: 31},{name: "Costa Rica", age: 35},                {name: "Croatia", age: 44},{name: "Cyprus", age: 35},                {name: "Czech Republic", age: 58},{name: "Côte d’Ivoire", age: 35},{name: "Denmark", age: 71} ,{name:            "Dominican Republic", age: 35},{name: "Ecuador", age: 30},{name: "Egypt", age: 27},            {name: "El Salvador", age: 21},{name: "Estonia", age: 54},{name: "Ethiopia",              age: 32}, {name: "Europe", age: 46.7}, {name: "Finland", age: 63},{name: "France", age: 52},{name: "Gabon", age: 35},{name: "Georgia", age: 30},{name: "Germany", age: 66},{name:            "Ghana", age: 32},{name: "Greece", age: 45},{name: "Guatemala",              age: 26},{name: "Guinea", age: 30},{name: "Haiti", age: 18},{name: "Honduras",            age: 23},{name: "Hong Kong", age: 43},{name: "Hungary", age: 54},{name:              "Indonesia", age: 32},{name: "Iran", age: 20},{name: "Iraq", age:                27},{name: "Ireland", age: 55},{name: "Israel", age: 68},{name: "Italy",                age: 37},{name: "Jamaica", age: 33},{name: "Japan", age: 43},{name:                "Jordan", age: 24},{name: "Kazakhstan", age: 40},{name: "Kenya", age: 38},{name:              "Korea", age: 33},{name: "Kosovo", age: 20},{name: "Kuwait", age: 44},{name:            "Kyrgyz Republic", age: 19},{name: "Latvia", age: 48},{name: "Lebanon", age: 44},{name:              "Lithuania", age: 39},{name: "Luxembourg", age: 53},{name: "Macedonia", age: 21},{name:            "Madagascar", age: 38},{name: "Malawi", age: 35},{name: "Malaysia", age: 36},                {name: "Mali", age: 33},{name: "Malta", age: 44},{name: "Mauritania", age: 33},            {name: "Mauritius", age: 39},{name: "Mexico", age: 32},{name: "Moldova", age: 27},                {name: "Mongolia", age: 41},{name: "Montenegro", age: 48},{name: "Myanmar", age: 52},            {name: "Namibia", age: 27},{name: "Nepal", age: 18},{name:"Netherlands", age:66},                {name: "New Zealand", age: 61},{name: "Nicaragua", age: 20},{name: "Niger", age: 31},            {name: "Nigeria", age: 26},{name: "Norway", age: 71}, {name: "North America", age: 42.7}, {name: "Pakistan", age: 26},            {name: "Panama", age: 27},{name: "Peru", age: 28},{name: "Philippines", age: 25},              {name: "Poland", age: 42},{name: "Portugal", age: 26},{name: "Puerto Rico", age: 32},            {name: "Romania", age: 22},{name: "Russia", age: 38},{name: "Rwanda",            age: 26},{name: "Saudi Arabia", age: 31},{name: "Senegal", age: 40},{name: "Serbia", age:            38},{name: "Sierra Leone", age: 21},{name: "Singapore", age: 59},{name:                      "Slovak Republic", age: 48},{name: "Slovenia", age: 44},{name: "Somalia", age: 15},            {name: "South Africa", age: 42}, {name: "South America", age: 31.6}, {name: "Spain", age: 49},{name:            "Sri Lanka", age: 35},{name: "Sudan", age: 21},{name: "Sweden", age: 71},{name:              "Switzerland", age: 57},{name: "Taiwan", age: 37},{name: "Tajikistan", age: 17},            {name: "Tanzania", age: 40},{name: "Thailand", age: 27},{name: "Togo", age:     38}, {name: "Trinidad", age: 18}, {name: "Tunisia", age: 45},{name: "Turkey", age: 24},{name: "Turkmenistan       ", age: 41},{name: "Uganda", age: 34},{name: "Ukraine", age:              40},{name: "United Arab Emirates", age: 38},{name: "United Kingdom", age: 67},{name: "United States",            age: 57},{name: "Uruguay", age: 45},{name: "Uzbekistan",                age: 21},{name: "Venezuela", age: 25},{name: "Vietnam", age: 24},{name: "West Bank and Gaza",              age: 25},{name: "Yemen", age: 13},{name: "Zambia", age: 40},{name: "Zimbabwe",            age: 41},{name: "India", age: 26},{name: "Turks and Caicos Islands", age: 16},{name: "US", age: 57},{name: "USA", age: 57},{name: "England", age: 67},{name: "Worldwide", age:33}];
+                
+                
+                for (i = 0; i < data.length; i++) {
+                    if (data[i]['name'] == textObj.value) {
+                        divObj.innerHTML = data[i]['age'];
+                    }
+                }
+            }
 
 
 	</script>

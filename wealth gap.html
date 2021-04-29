@@ -15,7 +15,7 @@
         	}
 
         	p {
-            	font-size: 30px;
+            	font-size: 26px;
             	font-family: optima;
         	}
 
@@ -38,6 +38,23 @@
             	padding: 5px 5px;
             }
 
+            #graph1:hover {
+                border: 3.5px solid #000000;
+            }
+
+             /* Used for like a header bar, for different sections in the page */
+            h1 {
+                background-color:#ffffff;
+                color: black;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                padding: 10px;
+                text-align: center;
+                font-family: optima;     
+                border-radius: 35px;
+                border: 2px solid #000000;      
+            }
+
 
 
 		</style>
@@ -48,19 +65,39 @@
 
 	<body>
 		
-		
-		<p>HI</p>
+<!---Everything is centered inside of this bracket--->
+<center>
+
+<!---Information header--->
+    <h1>Info</h1>
+
+        <!-----This is the discription of what the graph represents below---->	
+		<p>Below is a graph of some countries with what there top 10 percent of people have in the overall wealth of their country! </p>
+
+
+    <!---Graph showing distribution of wealth in the top 10% amongst multiple countries---->
+        <img src="Images/graph1.jpg" alt="Wealth distribution graph"
+        id="graph1">
+
+<br><br>
+
+    <h1>Key Details</h1>
+
+        <p>To compare some data, we can see that continents with a higher financial literacy rate like Europe with 46.7% (data in finacial literacy page), have overall less wealth amongst the top 10% because more people are financially educated. Europe has the highest financial literacy rate besides Australia (which doesn't appear in the graph so we can't compare), when looking at the graph we can see that Europe has the least amount of wealth in the top 10%. This is not a coincidince, another example is that if we look at Asia's financial literacy rate of 32.3% which is the lowest out of all continents also coincides with the graph. India is a country inside of Asia who has a low financial literacy rate, in the graph they are almost number 1 in the amount of wealth in the top 10%.</p>
+
+
+</center>
 
 
 
-
-
+<br><br><br><br>
 
 
 
 		<center>
 			
 
+<!---Buttons for the navigation between pages on the website, these buttons are on everypage---->
 		<button id="button2" onclick="window.location.href = 'financial literacy.html';" target="_blank">
         Back
         </button>
@@ -77,18 +114,7 @@
 		</center>
 
 
-
-
-
 	</body>
-
-
-	<script>
-		
-
-
-
-	</script>
 
 
 
